@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: linear-gradient(to right, #6366f1, #8b5cf6); /* From indigo-500 to purple-600 */
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
