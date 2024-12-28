@@ -1,6 +1,6 @@
 import express from "express";
 import marketDataRoutes from './routes/marketDataRoutes.js';
-
+import fearAndGreedRoutes from "./routes/fearAndGreedRoutes.js"
 import { corsMiddleware } from "./middleware/corsMiddleware.js";
 import dotenv from 'dotenv';
 
@@ -16,7 +16,9 @@ app.use(corsMiddleware);
 app.use(express.json());
 
 // Routes
-app.use('/api', marketDataRoutes);
+app.use('/api/market-data', marketDataRoutes); 
+app.use('/api/fear-and-greed-data', fearAndGreedRoutes);
+
 
   
 // Start the server
