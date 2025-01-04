@@ -11,6 +11,16 @@ export const getMarketData = async (req, res) => {
           'X-CMC_PRO_API_KEY': process.env.CMC_PRO_API_KEY, // Get API key from environment variables
         },
       });
+
+
+     // Check if the response is not OK (e.g., status code is not 200-299)
+    if (!response.ok) {
+      console.error('Invalid API response:', response.status, response.statusText);
+      return res.status(500).json({ error: 'Failed to fetch valid market data' });
+    }
+
+
+
       // Parse the JSON data received from the CoinMarketCap API
       const data = await response.json();
       
