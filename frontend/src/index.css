@@ -3,8 +3,27 @@
 @tailwind utilities;
 
 body {
-  background: linear-gradient(to right, #6366f1, #8b5cf6); /* From indigo-500 to purple-600 */
+  background: linear-gradient(to right, #1b1ed3, #1b1ed3); 
   min-height: 100vh;
   margin: 0;
   font-family: 'Open Sans', sans-serif;
+}
+
+
+.main-nav.sticky-nav {
+  background-color: #1b1ed3;
+  color: white;
+  position: sticky;
+  top: 0;
+  transform: translateY(-60px);
+  animation: StickyNav 0.3s ease forwards;
+}
+
+@keyframes StickyNav {
+  0% {
+    transform: translateY(-80px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
